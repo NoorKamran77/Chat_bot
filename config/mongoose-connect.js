@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
-const configs = require("config");
 
 
-mongoose.connect(`${configs.get("MONGODB_URI")}chat-bot`)
+mongoose.connect(`${process.env.MONGO_URI}chat-bot`)
     .then(() => {
         console.log("Connected");
     })

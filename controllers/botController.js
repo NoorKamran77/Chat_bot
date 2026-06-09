@@ -1,6 +1,6 @@
 const botModel = require("../models/Bot");
 const express = require("express");
-
+const messageModel = require("../models/Message");
 exports.createBot = async function (req, res) {
     try {
         const { botName, systemPrompt, knowledge } = req.body;
